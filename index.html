@@ -1,253 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instrumentos de Maguey</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <h1>Instrumentos de Maguey</h1> 
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cultura Tolteca | Aerófonos de Maguey & Medicina Tradicional</title>
-  <style>
-    /* ==========================================================================
-       VARIABLES Y PALETA DE COLORES (Orgánica y Terrenal)
-       ========================================================================== */
-    :root {
-      --verde-maguey: #2B4235;     /* Verde penca de agave profundo */
-      --tierra-barro: #8C472E;     /* Tono arcilla/barro de temazcal */
-      --arena-hueso: #F3EFE6;      /* Fondo suave no deslumbrante */
-      --humo-obsidiana: #1A1E1C;  /* Texto oscuro elegante */
-      --dorado-maiz: #C8963E;     /* Acento de luz y fuego */
-      --whatsapp-color: #25D366;  /* Verde oficial WhatsApp */
-      --fuente-titulos: 'Georgia', serif;
-      --fuente-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: var(--arena-hueso);
-      color: var(--humo-obsidiana);
-      font-family: var(--fuente-texto);
-      line-height: 1.8;
-    }
-
-    /* ==========================================================================
-       ENCABEZADO Y NAVEGACIÓN
-       ========================================================================== */
-    header {
-      background-color: var(--verde-maguey);
-      color: var(--arena-hueso);
-      padding: 2.5rem 1rem;
-      text-align: center;
-      border-bottom: 5px solid var(--tierra-barro);
-    }
-
-    header h1 {
-      font-family: var(--fuente-titulos);
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      color: var(--dorado-maiz);
-      font-size: 1.1rem;
-      font-style: italic;
-    }
-
-    nav {
-      background-color: var(--humo-obsidiana);
-      text-align: center;
-      padding: 0.8rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      color: var(--arena-hueso);
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: 600;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--dorado-maiz);
-    }
-
-    /* ==========================================================================
-       CONTENEDORES Y SECCIONES
-       ========================================================================== */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    .intro-block {
-      background-color: #E6E0D3;
-      padding: 2.5rem;
-      border-left: 6px solid var(--tierra-barro);
-      border-radius: 4px;
-      margin-bottom: 3.5rem;
-    }
-
-    .intro-block h2 {
-      font-family: var(--fuente-titulos);
-      color: var(--verde-maguey);
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-family: var(--fuente-titulos);
-      color: var(--verde-maguey);
-      font-size: 2.2rem;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 3px;
-      background-color: var(--tierra-barro);
-      margin: 0.6rem auto 0 auto;
-    }
-
-    /* Tarjetas de artículos y servicios */
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-      margin-bottom: 4rem;
-    }
-
-    .card {
-      background-color: #FFFFFF;
-      border: 1px solid #D9D2C5;
-      border-radius: 8px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-    }
-
-    .card h3 {
-      font-family: var(--fuente-titulos);
-      color: var(--tierra-barro);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #333333;
-      margin-bottom: 1.2rem;
-    }
-
-    .box-proceso {
-      background-color: #F8F6F0;
-      border-top: 3px solid var(--verde-maguey);
-      padding: 1.2rem;
-      font-size: 0.88rem;
-      margin-bottom: 1.5rem;
-      border-radius: 4px;
-    }
-
-    .box-proceso strong {
-      color: var(--tierra-barro);
-      display: block;
-      margin-bottom: 0.4rem;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      letter-spacing: 0.5px;
-    }
-
-    /* ==========================================================================
-       BOTONES Y CONTACTO WHATSAPP
-       ========================================================================== */
-    .btn-whatsapp {
-      display: inline-block;
-      background-color: var(--verde-maguey);
-      color: #FFFFFF;
-      text-decoration: none;
-      padding: 0.9rem 1.2rem;
-      border-radius: 5px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 0.9rem;
-      transition: background-color 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: var(--tierra-barro);
-    }
-
-    /* Botón flotante */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: var(--whatsapp-color);
-      color: #FFFFFF;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 28px;
-      box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-
-    /* ==========================================================================
-       PIE DE PÁGINA
-       ========================================================================== */
-    footer {
-      background-color: var(--humo-obsidiana);
-      color: var(--arena-hueso);
-      text-align: center;
-      padding: 3rem 1rem;
-      border-top: 4px solid var(--tierra-barro);
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
-      nav a { display: block; margin: 10px 0; }
-    }
-  </style>
+  <title>ESPACIO TOLTECA & AERÓFONOS DE MAGUEY</title>
+  <!-- Aquí conectamos el archivo CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Botón Flotante Permanente de WhatsApp -->
   <a href="https://wa.me/525527486085?text=Hola,%20me%20interesa%20recibir%20información%20sobre%20sus%20instrumentos%20y%20servicios" 
      class="whatsapp-float" 
      target="_blank" 
@@ -270,6 +32,7 @@
 
   <div class="container">
 
+    <!-- SECCIÓN FILOSOFÍA -->
     <section id="filosofia" class="intro-block">
       <h2>Usos, Costumbres y la Filosofía Tolteca</h2>
       <p>
@@ -280,12 +43,13 @@
       </p>
     </section>
 
+    <!-- SECCIÓN AERÓFONOS -->
     <h2 id="aerofonos" class="section-title">Elaboración Artesanal de Aerófonos</h2>
 
     <div class="grid-cards">
 
       <article class="card">
-        <div>
+        <div class="card-body">
           <h3>Trompeta Tolteca de Maguey (Didgeridoo Ancestral)</h3>
           <p>
             Aerófono de tono grave continuo elaborado con la inflorescencia seca del agave (quiote) o su base principal. Genera una resonancia vibracional de baja frecuencia que promueve el alineamiento de los centros energéticos y la meditación profunda.
@@ -302,7 +66,7 @@
       </article>
 
       <article class="card">
-        <div>
+        <div class="card-body">
           <h3>Flautas y Tlapitzalli de Quiote</h3>
           <p>
             Instrumentos de viento de escala suave y dulce digitación. Diseñados para guiar viajes de respiración, cantos sagrados e introspección individual o grupal.
@@ -319,12 +83,13 @@
 
     </div>
 
+    <!-- SECCIÓN MEDICINA TRADICIONAL -->
     <h2 id="medicina" class="section-title">Técnicas de Medicina Tradicional</h2>
 
     <div class="grid-cards">
 
       <article class="card">
-        <div>
+        <div class="card-body">
           <h3>Curandería Herbolaria y Limpias Energéticas</h3>
           <p>
             Práctica basada en la medicina botánica y la cosmovisión autóctona. Se enfoca en restablecer la armonía térmica y energética del cuerpo para liberar tensiones acumuladas y bloqueos emocionales.
@@ -338,7 +103,7 @@
       </article>
 
       <article class="card">
-        <div>
+        <div class="card-body">
           <h3>Alineación y Armonización Sonora</h3>
           <p>
             Uso del aire soplado a través de los instrumentos de maguey colocado directamente sobre el campo vibratorio del paciente para inducir estados alfa de profunda relajación.
@@ -353,12 +118,14 @@
 
     </div>
 
+    <!-- SECCIÓN TEMAZCAL -->
     <h2 id="temazcal" class="section-title">Ceremonia de Temazcal</h2>
 
     <div class="grid-cards">
 
       <article class="card">
-        <div>
+        <img src="input_file_0.png" alt="Instrumento ceremonial de maguey curado" class="card-img">
+        <div class="card-body">
           <h3>Baño de Vapor Medicinal y Ritual</h3>
           <p>
             Representa el ingreso al vientre de la Madre Tierra (<em>Tonantzin</em>). Es una terapia ancestral de desintoxicación intensa a través del sudor, guiada por cantos, medicinas herbales e instrumentos de viento.
@@ -373,13 +140,14 @@
 
     </div>
 
+    <!-- SECCIÓN TALLERES Y TERAPIAS -->
     <h2 id="talleres" class="section-title">Talleres y Terapias de Relajación</h2>
 
     <div class="grid-cards">
 
       <article class="card">
-        <div>
-          <h3>Taller Practico: Construye tu Instrumento de Maguey</h3>
+        <div class="card-body">
+          <h3>Taller Práctico: Construye tu Instrumento de Maguey</h3>
           <p>
             Aprende paso a paso la técnica de vaciado, curado con cera de abeja, afinación y embocadura para elaborar tu propio aerófono con madera de agave.
           </p>
@@ -392,14 +160,14 @@
       </article>
 
       <article class="card">
-        <div>
+        <div class="card-body">
           <h3>Círculos de Meditación y Respiración Tolteca</h3>
           <p>
             Encuentros grupales orientados al dominio del aliento consciente, el cultivo del silencio interno y la meditación profunda con fondo sonoro de quiotes.
           </p>
           <div class="box-proceso">
             <strong>Propósito:</strong>
-            Reducir la ansiedad diaria, oxigenar el organismo y reectar con la paz mental y emocional a través de la sabiduría del aliento.
+            Reducir la ansiedad diaria, oxigenar el organismo y reconectar con la paz mental y emocional a través de la sabiduría del aliento.
           </div>
         </div>
         <a href="https://wa.me/525527486085?text=Informes%20sobre%20los%20Círculos%20de%20Meditación" class="btn-whatsapp" target="_blank">Inscribirme por WhatsApp</a>

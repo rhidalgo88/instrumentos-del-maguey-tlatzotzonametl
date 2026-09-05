@@ -1,1 +1,245 @@
+/* ==========================================================================
+   VARIABLES Y PALETA DE COLORES
+   ========================================================================== */
+:root {
+  /* Colores principales */
+  --verde-maguey: #2B4235;
+  --tierra-barro: #8C472E;
+  --arena-hueso: #F5F2EB;
+  --humo-obsidiana: #222222;
+  --dorado-maiz: #D4A373;
+  --whatsapp-color: #25D366;
 
+  /* Fuentes */
+  --fuente-titulos: 'Georgia', serif;
+  --fuente-texto: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--arena-hueso);
+  color: var(--humo-obsidiana);
+  font-family: var(--fuente-texto);
+  line-height: 1.8;
+}
+
+/* ==========================================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+header {
+  background-color: var(--verde-maguey);
+  color: var(--arena-hueso);
+  padding: 2.5rem 1rem;
+  text-align: center;
+  border-bottom: 5px solid var(--tierra-barro);
+}
+
+header h1 {
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--dorado-maiz);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+nav {
+  background-color: var(--humo-obsidiana);
+  text-align: center;
+  padding: 0.8rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: var(--arena-hueso);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--dorado-maiz);
+}
+
+/* ==========================================================================
+   CONTENEDORES Y SECCIONES
+   ========================================================================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.intro-block {
+  background-color: #E6E0D3;
+  padding: 2.5rem;
+  border-left: 6px solid var(--tierra-barro);
+  border-radius: 4px;
+  margin-bottom: 3.5rem;
+}
+
+.intro-block h2 {
+  font-family: var(--fuente-titulos);
+  color: var(--verde-maguey);
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--fuente-titulos);
+  color: var(--verde-maguey);
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--tierra-barro);
+  margin: 0.6rem auto 0 auto;
+}
+
+/* Tarjetas de artículos y servicios */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #D9D2C5;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.card-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--tierra-barro);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 1.2rem;
+}
+
+.box-proceso {
+  background-color: #F8F6F0;
+  border-top: 3px solid var(--verde-maguey);
+  padding: 1.2rem;
+  font-size: 0.88rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.box-proceso strong {
+  color: var(--tierra-barro);
+  display: block;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   BOTONES Y CONTACTO WHATSAPP
+   ========================================================================== */
+.btn-whatsapp {
+  display: block;
+  background-color: var(--verde-maguey);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 0 7px 7px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--tierra-barro);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--whatsapp-color);
+  color: #FFFFFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
+footer {
+  background-color: var(--humo-obsidiana);
+  color: var(--arena-hueso);
+  text-align: center;
+  padding: 3rem 1rem;
+  border-top: 4px solid var(--tierra-barro);
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  nav a { display: block; margin: 10px 0; }
+}
