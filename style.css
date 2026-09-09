@@ -44,6 +44,9 @@ body {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
+  /* utilizar bordes css con svg de patron */
+  border: 20px solid transparent;
+  border-image: url("greca.svg") 30 repeat;
 }
 
 .greca-borde {
