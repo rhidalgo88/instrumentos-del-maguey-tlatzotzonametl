@@ -42,7 +42,7 @@ body {
 
 /* Patrón SVG con espiral cuadrada y perfil escalonado simétrico de doble nivel */
 .greca-top, .greca-bottom {
-  height: 20px;
+  height: 35px;
   width: 100%;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='20' viewBox='0 0 60 20'><path d='M0 18h16V6h10v8h-5v-4h2v2h1v-1h-2v4h7V4H14v12H0' fill='none' stroke='%23d4a359' stroke-width='1.5' stroke-linecap='square'/><path d='M30 18h16V6h10v8h-5v-4h2v2h1v-1h-2v4h7V4H44v12H30' fill='none' stroke='%23d4a359' stroke-width='1.5' stroke-linecap='square'/></svg>");
   background-repeat: repeat-x;
